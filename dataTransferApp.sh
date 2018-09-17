@@ -5,22 +5,25 @@
 alias BEGINCOMMENT="if [ ]; then"
 alias ENDCOMMENT="fi"
 #--------------------------------------------------------
-echo "Press 0 to configure IP addresses first. Press Enter to Proceed BAU"
 # Allows us to read user input below, assigns stdin to keyboard
 exec < /dev/tty
-read -p answer 
-#echo "ans is " $ans
-if [ "$answer" = "0" ]; then
+echo "Enter Option and Press [ENTER] or just [ENTER] to run the program"
+echo "0. Set up IP addresses"
+echo "1. Print help"
+read answer 
+# echo "ans is " $answer
+if [ "$answer" == "0" ]; then
 	exit ERRCODE "Check the ip addresses using ifconfig"
 fi
 
-if [ "$answer" = "1" ]; then
+if [ "$answer" == "1" ]; then
+	echo ""
 	echo "This is simple Data Transfer Application. Read Instructions"
 	echo "1. All the routers should be configured manually to update FIB for particular prefix names"
 	echo "2. 'Dropbox/Thesis/files/' folder should contain the files to be hosted"
 fi
 
-exit
+#BEGINCOMMENT
 #-----------------------------------------------------------
 sourceIp="udp://192.168.56.105"	#not needed
 routerIp="udp://192.168.56.106"
@@ -59,11 +62,13 @@ if [ $1 -eq 3 ]; then
 	# Mention the  expected interest names as well.
 	# producer sends reply	
 	# -v is removed. & runs the process in background
+	unrar e files.rar files/ 
+	
 	ndnpingserver ndn:/good/morning &	# should be first command
-	ndnputchunks  ndn:/files/hello.txt < /home/lenovo/Dropbox/Thesis/files/hello.txt &
-	ndnputchunks  ndn:/files/1KB.txt < /home/lenovo/Dropbox/Thesis/files/1KB.txt &
-	#ndnputchunks  ndn:/files/10MB.txt < /home/lenovo/Dropbox/Thesis/files/10MB.txt &
-	#ndnputchunks  ndn:/files/100MB.txt < /home/lenovo/Dropbox/Thesis/files/100MB.txt &
+	ndnputchunks  ndn:/files/hello.txt < files/hello.txt &
+	ndnputchunks  ndn:/files/1KB.txt < files/1KB.txt &
+	ndnputchunks  ndn:/files/10MB.txt < files/10MB.txt &
+	ndnputchunks  ndn:/files/100MB.txt < files/100MB.txt &
 	
 	echo "Ready Host 3..."
 fi
