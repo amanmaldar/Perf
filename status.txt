@@ -1,0 +1,16 @@
+General NFD status:
+               version=0.6.2-commit-69692ab
+             startTime=20180919T024232.043000
+           currentTime=20180919T024746.723000
+                uptime=314 seconds
+      nNameTreeEntries=12
+           nFibEntries=2
+           nPitEntries=3
+  nMeasurementsEntries=0
+            nCsEntries=2
+          nInInterests=24
+         nOutInterests=24
+               nInData=25
+              nOutData=18
+              nInNacks=0
+             nOutNacks=0
