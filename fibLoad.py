@@ -1,22 +1,21 @@
 import subprocess
 
-#bashCommand = "sudo nfd-stop"
-t = subprocess.check_output(['bash', '-c', bashCommand])
+bashCommand = "sudo nfd-stop"
+subprocess.check_output(['bash', '-c', bashCommand])
 
-#bashCommand = "sudo nfd &> /home/lenovo/Dropbox/Thesis/Logs/minindn3/nfd.log &"
-#output = subprocess.check_output(['bash', '-c', bashCommand])
+bashCommand = "sudo nfd &> /home/lenovo/Dropbox/Thesis/Logs/minindn3/nfd.log &"
+subprocess.check_output(['bash', '-c', bashCommand])
 
 print "Set up forwarding path to M2"
 
+bashCommand = "nfdc face create udp://192.168.56.106"
+subprocess.check_output(['bash', '-c', bashCommand])
 
-#bashCommand = "nfdc face create udp://192.168.56.106"
-#output = subprocess.check_output(['bash', '-c', bashCommand])
-
-#bashCommand = "nfdc route add /ndn/d-site udp://192.168.56.106:6363"
-#output = subprocess.check_output(['bash', '-c', bashCommand])
+bashCommand = "nfdc route add /ndn/d-site udp://192.168.56.106:6363"
+subprocess.check_output(['bash', '-c', bashCommand])
 
 bashCommand = "nfdc route add /ndn/pref_a/pref_b/pref_c/pref_d/d-site udp://192.168.56.106:6363"
-output = subprocess.check_output(['bash', '-c', bashCommand])
+subprocess.check_output(['bash', '-c', bashCommand])
 
 print "Loading FIB Entries"
 for i in range(0,100):
@@ -83,51 +82,51 @@ output = subprocess.check_output(['bash', '-c', bashCommand])
 #!/bin/bash
 print "Starting the pings"
 bashCommand = "ndnping /ndn/d-site/d -i 1 -c 5000 -n 1 > /home/lenovo/Dropbox/Thesis/Logs/minindn3/clientLogs.txt"
-output = subprocess.check_output(['bash', '-c', bashCommand])
+subprocess.check_output(['bash', '-c', bashCommand])
 bashCommand = "ndnping /ndn/d-site/d -i 1 -c 5000 -n 1 > /home/lenovo/Dropbox/Thesis/Logs/minindn3/clientLogs.txt"
-output = subprocess.check_output(['bash', '-c', bashCommand])
+subprocess.check_output(['bash', '-c', bashCommand])
 print "Finshed 1/8"
 
 bashCommand = "ndnping /ndn/d-site/d -i 1 -c 5000 -n 6001 > /home/lenovo/Dropbox/Thesis/Logs/minindn3/clientLogs.txt"
-output = subprocess.check_output(['bash', '-c', bashCommand])
+subprocess.check_output(['bash', '-c', bashCommand])
 bashCommand = "ndnping /ndn/d-site/d -i 1 -c 5000 -n 6001 > /home/lenovo/Dropbox/Thesis/Logs/minindn3/clientLogs.txt "
-output = subprocess.check_output(['bash', '-c', bashCommand])
+subprocess.check_output(['bash', '-c', bashCommand])
 print "Finshed 2/8"
 
 bashCommand = "ndnping /ndn/d-site/d -i 1 -c 10000 -n 15001 > /home/lenovo/Dropbox/Thesis/Logs/minindn3/clientLogs.txt"
-output = subprocess.check_output(['bash', '-c', bashCommand])
+subprocess.check_output(['bash', '-c', bashCommand])
 bashCommand = "ndnping /ndn/d-site/d -i 1 -c 10000 -n 15001 > /home/lenovo/Dropbox/Thesis/Logs/minindn3/clientLogs.txt "
-output = subprocess.check_output(['bash', '-c', bashCommand])
+subprocess.check_output(['bash', '-c', bashCommand])
 print "Finshed 3/8"
 
 bashCommand = "ndnping /ndn/d-site/d -i 1 -c 20000 -n 30001 > /home/lenovo/Dropbox/Thesis/Logs/minindn3/clientLogs.txt"
-output = subprocess.check_output(['bash', '-c', bashCommand])
+subprocess.check_output(['bash', '-c', bashCommand])
 bashCommand = "ndnping /ndn/d-site/d -i 1 -c 20000 -n 30001 > /home/lenovo/Dropbox/Thesis/Logs/minindn3/clientLogs.txt"
-output = subprocess.check_output(['bash', '-c', bashCommand])
+subprocess.check_output(['bash', '-c', bashCommand])
 print "Finshed 4/8"
 
 bashCommand = "ndnping /ndn/d-site/d -i 1 -c 25000 -n 60001 > /home/lenovo/Dropbox/Thesis/Logs/minindn3/clientLogs.txt"
-output = subprocess.check_output(['bash', '-c', bashCommand])
+subprocess.check_output(['bash', '-c', bashCommand])
 bashCommand = "ndnping /ndn/d-site/d -i 1 -c 25000 -n 60001 > /home/lenovo/Dropbox/Thesis/Logs/minindn3/clientLogs.txt"
-output = subprocess.check_output(['bash', '-c', bashCommand])
+subprocess.check_output(['bash', '-c', bashCommand])
 print "Finshed 5/8"
 
 bashCommand = "ndnping /ndn/d-site/d -i 1 -c 5000 -n 100001 > /home/lenovo/Dropbox/Thesis/Logs/minindn3/clientLogs.txt"
-output = subprocess.check_output(['bash', '-c', bashCommand])
+subprocess.check_output(['bash', '-c', bashCommand])
 bashCommand = "ndnping /ndn/d-site/d -i 1 -c 5000 -n 100001 > /home/lenovo/Dropbox/Thesis/Logs/minindn3/clientLogs.txt"
-output = subprocess.check_output(['bash', '-c', bashCommand])
+subprocess.check_output(['bash', '-c', bashCommand])
 print "Finshed 6/8"
 
 bashCommand = "ndnping /ndn/d-site/d -i 1 -c 5000 -n 110001 > /home/lenovo/Dropbox/Thesis/Logs/minindn3/clientLogs.txt"
-output = subprocess.check_output(['bash', '-c', bashCommand])
+subprocess.check_output(['bash', '-c', bashCommand])
 bashCommand = "ndnping /ndn/d-site/d -i 1 -c 5000 -n 110001 > /home/lenovo/Dropbox/Thesis/Logs/minindn3/clientLogs.txt"
-output = subprocess.check_output(['bash', '-c', bashCommand])
+subprocess.check_output(['bash', '-c', bashCommand])
 print "Finshed 7/8"
 
 bashCommand = "ndnping /ndn/d-site/d -i 1 -c 5000 -n 120001 > /home/lenovo/Dropbox/Thesis/Logs/minindn3/clientLogs.txt"
-output = subprocess.check_output(['bash', '-c', bashCommand])
+subprocess.check_output(['bash', '-c', bashCommand])
 bashCommand = "ndnping /ndn/d-site/d -i 1 -c 5000 -n 120001 > /home/lenovo/Dropbox/Thesis/Logs/minindn3/clientLogs.txt"
-output = subprocess.check_output(['bash', '-c', bashCommand])
+subprocess.check_output(['bash', '-c', bashCommand])
 print "Finshed 100%"
 
 print "Get the results"
