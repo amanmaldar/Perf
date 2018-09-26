@@ -1,18 +1,19 @@
 import subprocess
 
-bashCommand = "sudo nfd-stop"
-output = subprocess.check_output(['bash', '-c', bashCommand])
+#bashCommand = "sudo nfd-stop"
+t = subprocess.check_output(['bash', '-c', bashCommand])
 
-bashCommand = "sudo nfd &> /home/lenovo/Dropbox/Thesis/Logs/minindn3/nfd.log &"
-output = subprocess.check_output(['bash', '-c', bashCommand])
+#bashCommand = "sudo nfd &> /home/lenovo/Dropbox/Thesis/Logs/minindn3/nfd.log &"
+#output = subprocess.check_output(['bash', '-c', bashCommand])
 
 print "Set up forwarding path to M2"
 
-bashCommand = "nfdc face create udp://192.168.56.106"
-output = subprocess.check_output(['bash', '-c', bashCommand])
 
-bashCommand = "nfdc route add /ndn/d-site udp://192.168.56.106:6363"
-output = subprocess.check_output(['bash', '-c', bashCommand])
+#bashCommand = "nfdc face create udp://192.168.56.106"
+#output = subprocess.check_output(['bash', '-c', bashCommand])
+
+#bashCommand = "nfdc route add /ndn/d-site udp://192.168.56.106:6363"
+#output = subprocess.check_output(['bash', '-c', bashCommand])
 
 bashCommand = "nfdc route add /ndn/pref_a/pref_b/pref_c/pref_d/d-site udp://192.168.56.106:6363"
 output = subprocess.check_output(['bash', '-c', bashCommand])
@@ -72,7 +73,7 @@ for i in range(901,1000):
     output = subprocess.check_output(['bash', '-c', bashCommand])
 
 
-print "100 Fib Entries Loaded"
+print "1000 Fib Entries Loaded"
 
 print "Printing status"
 bashCommand = "nfdc status show"
