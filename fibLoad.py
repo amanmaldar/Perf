@@ -74,6 +74,11 @@ for i in range(901,1000):
 
 print "100 Fib Entries Loaded"
 
+print "Printing status"
+bashCommand = "nfdc status show"
+output = subprocess.check_output(['bash', '-c', bashCommand])
+
+
 #!/bin/bash
 print "Starting the pings"
 bashCommand = "ndnping /ndn/d-site/d -i 1 -c 5000 -n 1 > /home/lenovo/Dropbox/Thesis/Logs/minindn3/clientLogs.txt"
