@@ -85,9 +85,9 @@ output = subprocess.check_output(['bash', '-c', bashCommand])
 logPath = "/home/lenovo/clientLogs.txt"
 print "Starting the pings"
 bashCommand = "ndnping /ndn/d-site/d -i 1 -c 5000 -n 1 > logPath"
-subprocess.check_output(['bash', '-c', bashCommand])
+subprocess.run(['bash', '-c', bashCommand])
 bashCommand = "ndnping /ndn/d-site/d -i 1 -c 5000 -n 1 > logPath"
-subprocess.check_output(['bash', '-c', bashCommand])
+subprocess.run(['bash', '-c', bashCommand])
 print "Finshed 1/8"
 
 bashCommand = "ndnping /ndn/d-site/d -i 1 -c 5000 -n 6001 > logPath"
