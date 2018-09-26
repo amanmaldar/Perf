@@ -1,4 +1,5 @@
 import subprocess
+import time
 
 bashCommand = "sudo nfd-stop"
 subprocess.check_output(['bash', '-c', bashCommand])
@@ -6,6 +7,7 @@ subprocess.check_output(['bash', '-c', bashCommand])
 bashCommand = "sudo nfd &> /home/lenovo/Dropbox/Thesis/Logs/minindn3/nfd.log &"
 subprocess.check_output(['bash', '-c', bashCommand])
 
+time.sleep(3)
 print "Set up forwarding path to M2"
 
 bashCommand = "nfdc face create udp://192.168.56.106"
