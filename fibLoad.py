@@ -22,54 +22,54 @@ for i in range(0,100):
     bashCommand = "nfdc route add /ndn/dummyPrefix_"+str(i)+" udp://192.168.56.106:6363"
     output = subprocess.check_output(['bash', '-c', bashCommand])
 
-for i in range(101,200):
-    bashCommand = "nfdc route add /ndn/dummyPrefix/pref_a_"+str(i)+" udp://192.168.56.106:6363"
-    output = subprocess.check_output(['bash', '-c', bashCommand])
+# for i in range(101,200):
+#     bashCommand = "nfdc route add /ndn/dummyPrefix/pref_a_"+str(i)+" udp://192.168.56.106:6363"
+#     output = subprocess.check_output(['bash', '-c', bashCommand])
 
 
-for i in range(201,300):
-    bashCommand = "nfdc route add /ndn/dummyPrefix/pref_b_"+str(i)+" udp://192.168.56.106:6363"
-    output = subprocess.check_output(['bash', '-c', bashCommand])
+# for i in range(201,300):
+#     bashCommand = "nfdc route add /ndn/dummyPrefix/pref_b_"+str(i)+" udp://192.168.56.106:6363"
+#     output = subprocess.check_output(['bash', '-c', bashCommand])
 
 
-for i in range(301,400):
-    bashCommand = "nfdc route add /ndn/dummyPrefix/pref_a/pref_b_"+str(i)+" udp://192.168.56.106:6363"
-    output = subprocess.check_output(['bash', '-c', bashCommand])
+# for i in range(301,400):
+#     bashCommand = "nfdc route add /ndn/dummyPrefix/pref_a/pref_b_"+str(i)+" udp://192.168.56.106:6363"
+#     output = subprocess.check_output(['bash', '-c', bashCommand])
 
 
-for i in range(301,400):
-    bashCommand = "nfdc route add /ndn/pref_a/pref_b/pref_c_"+str(i)+" udp://192.168.56.106:6363"
-    output = subprocess.check_output(['bash', '-c', bashCommand])
+# for i in range(301,400):
+#     bashCommand = "nfdc route add /ndn/pref_a/pref_b/pref_c_"+str(i)+" udp://192.168.56.106:6363"
+#     output = subprocess.check_output(['bash', '-c', bashCommand])
 
 
-for i in range(401,500):
-    bashCommand = "nfdc route add /ndn/dummyPrefix/pref_a/pref_b/pref_c_"+str(i)+" udp://192.168.56.106:6363"
-    output = subprocess.check_output(['bash', '-c', bashCommand])
+# for i in range(401,500):
+#     bashCommand = "nfdc route add /ndn/dummyPrefix/pref_a/pref_b/pref_c_"+str(i)+" udp://192.168.56.106:6363"
+#     output = subprocess.check_output(['bash', '-c', bashCommand])
 
 
-for i in range(501,600):
-    bashCommand = "nfdc route add /ndn/dummyPrefix/pref_a/pref_b/pref_c/pref_d_"+str(i)+" udp://192.168.56.106:6363"
-    output = subprocess.check_output(['bash', '-c', bashCommand])
+# for i in range(501,600):
+#     bashCommand = "nfdc route add /ndn/dummyPrefix/pref_a/pref_b/pref_c/pref_d_"+str(i)+" udp://192.168.56.106:6363"
+#     output = subprocess.check_output(['bash', '-c', bashCommand])
 
 
-for i in range(601,700):
-    bashCommand = "nfdc route add /ndn/dummyPrefix/pref_a/pref_b/pref_c/pref_e_"+str(i)+" udp://192.168.56.106:6363"
-    output = subprocess.check_output(['bash', '-c', bashCommand])
+# for i in range(601,700):
+#     bashCommand = "nfdc route add /ndn/dummyPrefix/pref_a/pref_b/pref_c/pref_e_"+str(i)+" udp://192.168.56.106:6363"
+#     output = subprocess.check_output(['bash', '-c', bashCommand])
 
 
-for i in range(701,800):
-    bashCommand = "nfdc route add /ndn/dummyPrefix/pref_a/pref_b/pref_c/pref_e/pref_d_"+str(i)+" udp://192.168.56.106:6363"
-    output = subprocess.check_output(['bash', '-c', bashCommand])
+# for i in range(701,800):
+#     bashCommand = "nfdc route add /ndn/dummyPrefix/pref_a/pref_b/pref_c/pref_e/pref_d_"+str(i)+" udp://192.168.56.106:6363"
+#     output = subprocess.check_output(['bash', '-c', bashCommand])
 
 
-for i in range(801,900):
-    bashCommand = "nfdc route add /ndn/pref_a/pref_b/pref_c/pref_d_"+str(i)+" udp://192.168.56.106:6363"
-    output = subprocess.check_output(['bash', '-c', bashCommand])
+# for i in range(801,900):
+#     bashCommand = "nfdc route add /ndn/pref_a/pref_b/pref_c/pref_d_"+str(i)+" udp://192.168.56.106:6363"
+#     output = subprocess.check_output(['bash', '-c', bashCommand])
 
 
-for i in range(901,1000):
-    bashCommand = "nfdc route add /ndn/dummyPrefix/pref_a/pref_b/pref_c"+str(i)+" udp://192.168.56.106:6363"
-    output = subprocess.check_output(['bash', '-c', bashCommand])
+# for i in range(901,1000):
+#     bashCommand = "nfdc route add /ndn/dummyPrefix/pref_a/pref_b/pref_c"+str(i)+" udp://192.168.56.106:6363"
+#     output = subprocess.check_output(['bash', '-c', bashCommand])
 
 
 print "1000 Fib Entries Loaded"
